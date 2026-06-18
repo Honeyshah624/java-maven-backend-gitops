@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: java-maven-backend
+  labels:
+    app: java-maven-backend
+spec:
+  type: LoadBalancer
+  selector:
+    app: java-maven-backend
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080

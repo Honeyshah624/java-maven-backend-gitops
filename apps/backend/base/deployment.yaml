@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-maven-backend
+  labels:
+    app: java-maven-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: java-maven-backend
+  template:
+    metadata:
+      labels:
+        app: java-maven-backend
+    spec:
+      containers:
+        - name: java-maven-backend
+          image: java-maven-backend
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "500m"
+              memory: "1Gi"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 40
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 70
+            periodSeconds: 20
