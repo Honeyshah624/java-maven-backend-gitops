@@ -8,5 +8,5 @@ resources:
 
 images:
   - name: java-maven-backend
-    newName: 454143665149.dkr.ecr.ap-south-1.amazonaws.com/java-maven-backend
+    newName: 398892072547.dkr.ecr.ap-south-1.amazonaws.com/java-maven-backend
     newTag: v1
