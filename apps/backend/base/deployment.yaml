@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: java-maven-backend
-          image: java-maven-backendcd 
+          image: java-maven-backend 
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
