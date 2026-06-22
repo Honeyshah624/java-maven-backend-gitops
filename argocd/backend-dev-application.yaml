@@ -8,7 +8,7 @@ spec:
 
   source:
     repoURL: https://github.com/Honeyshah624/java-maven-backend-gitops.git
-    targetRevision: main
+    targetRevision: developer
     path: apps/backend/overlays/dev
 
   destination:

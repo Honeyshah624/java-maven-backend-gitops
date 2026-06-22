@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: backend-prod
+
+resources:
+  - ../../base
+
+images:
+  - name: java-maven-backend
+    newName: 398892072547.dkr.ecr.ap-south-1.amazonaws.com/java-maven-backend
+    newTag: prod-v1
