@@ -9,4 +9,4 @@ resources:
 images:
   - name: java-maven-backend
     newName: 398892072547.dkr.ecr.ap-south-1.amazonaws.com/java-maven-backend
-    newTag: prod-0646ceb
+    newTag: prod-f4f4c0a
